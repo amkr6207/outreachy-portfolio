@@ -7,76 +7,85 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <aside class="panel left">
-      <div class="title-band">
-        <h1>Aman<br/>Outreachy Portfolio</h1>
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <img class="avatar" src="assets/images/profile.jpg" alt="Aman profile photo" />
+      <h1 class="name">Aman</h1>
+      <p class="role">Fedora CommOps Outreachy Applicant</p>
+      <p class="email">amkr6207@gmail.com</p>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Outreachy sections">
+      <a href="#summary">Contribution Summary</a>
+      <a href="#timeline">Contribution Timeline</a>
+      <a href="#highlight">Biggest Contribution</a>
+      <a href="#skills">Skills and Learnings</a>
+    </nav>
+
+    <div class="social-links">
+      <a href="https://github.com/amkr6207" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+      <a href="https://www.linkedin.com/in/aman-1177b2148/" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+      <a href="https://codeforces.com/profile/amkr6207" target="_blank" rel="noopener" aria-label="Codeforces">CF</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <section class="intro card">
+      <p class="badge">Application Cycle: 2026</p>
+      <h2>Outreachy Contribution Portfolio</h2>
+      <p>
+        This page tracks my Outreachy contribution journey with issue links, pull requests,
+        community discussion references, and key outcomes.
+      </p>
+      <p class="last-updated">Last Updated: April 2026</p>
+    </section>
+
+    <section id="summary" class="card">
+      <h3>Contribution Summary</h3>
+      <div class="stats-grid">
+        <article class="stat"><strong>0</strong><span>Issues Worked On</span></article>
+        <article class="stat"><strong>0</strong><span>Pull Requests Opened</span></article>
+        <article class="stat"><strong>0</strong><span>PRs Merged</span></article>
+        <article class="stat"><strong>0</strong><span>Discussion Comments</span></article>
       </div>
-      <div class="left-body">
-        <img class="avatar" src="assets/images/profile.jpg" alt="Aman profile photo" />
-        <div class="chip">Fedora CommOps | 2026</div>
-        <p>
-          This page tracks my Outreachy contribution journey in one place with links,
-          outcomes, and key learnings.
-        </p>
-        <div class="links">
-          <a href="https://github.com/amkr6207" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/aman-1177b2148/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://codeforces.com/profile/amkr6207" target="_blank" rel="noopener">Codeforces</a>
-        </div>
-      </div>
-    </aside>
+      <p class="helper">Replace these numbers with your latest totals.</p>
+    </section>
 
-    <main class="panel main">
-      <h2>Contribution Dashboard</h2>
-      <div class="deck">
-        <div class="stat"><strong>0</strong>Issues</div>
-        <div class="stat"><strong>0</strong>PRs Opened</div>
-        <div class="stat"><strong>0</strong>PRs Merged</div>
-        <div class="stat"><strong>0</strong>Comments</div>
-      </div>
+    <section id="timeline" class="card">
+      <h3>Contribution Timeline</h3>
+      <article class="timeline-item">
+        <h4>Contribution Title 1</h4>
+        <p class="meta">Type: Issue | Date: YYYY-MM-DD</p>
+        <p>What I did: Briefly explain your work and your approach.</p>
+        <p>Impact: Mention what improved for project/community.</p>
+        <a href="#" target="_blank" rel="noopener">Open link</a>
+      </article>
 
-      <div class="note">
-        Replace the numbers and entries below with your actual Fedora CommOps work links.
-      </div>
+      <article class="timeline-item">
+        <h4>Contribution Title 2</h4>
+        <p class="meta">Type: Pull Request | Date: YYYY-MM-DD</p>
+        <p>What I did: Describe the update and collaboration details.</p>
+        <p>Impact: Highlight the final outcome.</p>
+        <a href="#" target="_blank" rel="noopener">Open link</a>
+      </article>
+    </section>
 
-      <h2>Contribution Timeline</h2>
-      <ul class="timeline">
-        <li>
-          <h3>Contribution Title 1</h3>
-          <div class="meta">Type: Issue | Date: YYYY-MM-DD</div>
-          <p>What I did: Briefly summarize your work and your approach.</p>
-          <p>Impact: Mention what improved for project/community.</p>
-          <a href="#" target="_blank" rel="noopener">Open link</a>
-        </li>
-        <li>
-          <h3>Contribution Title 2</h3>
-          <div class="meta">Type: Pull Request | Date: YYYY-MM-DD</div>
-          <p>What I did: Describe the update and collaboration details.</p>
-          <p>Impact: Highlight final outcome.</p>
-          <a href="#" target="_blank" rel="noopener">Open link</a>
-        </li>
-      </ul>
+    <section id="highlight" class="card split">
+      <article>
+        <h3>Biggest Contribution</h3>
+        <p><strong>Problem:</strong> Describe the challenge you solved.</p>
+        <p><strong>Approach:</strong> Explain your implementation and feedback cycle.</p>
+        <p><strong>Result:</strong> Mention the final result clearly.</p>
+      </article>
 
-      <div class="split">
-        <section class="box">
-          <h3>Biggest Contribution</h3>
-          <p><strong>Problem:</strong> Describe the challenge you solved.</p>
-          <p><strong>Approach:</strong> Explain implementation and feedback process.</p>
-          <p><strong>Result:</strong> Mention result clearly.</p>
-        </section>
-
-        <section class="box">
-          <h3>Skills and Learnings</h3>
-          <p>Open source communication and collaboration</p>
-          <p>Git workflow and contribution hygiene</p>
-          <p>Documentation and review iteration</p>
-          <p>Community-first problem solving</p>
-        </section>
-      </div>
-
-      <p class="footer">Last updated: April 2026</p>
-    </main>
-  </div>
+      <article id="skills">
+        <h3>Skills and Learnings</h3>
+        <p>Open source communication and collaboration</p>
+        <p>Issue triage and contribution workflow</p>
+        <p>Documentation quality and review iteration</p>
+        <p>Community-first problem solving</p>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
