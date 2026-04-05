@@ -189,6 +189,11 @@ h3 {
   text-decoration: underline;
 }
 
+.pending-proof {
+  color: var(--muted);
+  font-style: italic;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
