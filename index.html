@@ -6,214 +6,280 @@
   <title>Outreachy Portfolio | Aman</title>
   <style>
     :root {
-      --bg: #f6f8fb;
-      --panel: #ffffff;
-      --text: #1f2937;
-      --muted: #4b5563;
-      --accent: #0f766e;
-      --accent-soft: #ccfbf1;
-      --line: #dbe4ee;
+      --ink: #101828;
+      --paper: #fffdf8;
+      --sand: #f6efe3;
+      --mint: #dff5ec;
+      --orange: #d86f31;
+      --teal: #0f766e;
+      --line: #d9cdb8;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: "Segoe UI", "Noto Sans", sans-serif;
-      background: radial-gradient(circle at 10% 0%, #e6fffa, transparent 35%), var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      color: var(--ink);
+      background:
+        linear-gradient(115deg, rgba(216, 111, 49, 0.10) 0%, rgba(15, 118, 110, 0.10) 100%),
+        repeating-linear-gradient(0deg, #fffdfa 0, #fffdfa 27px, #f8f2e8 28px),
+        var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
     }
 
-    .container {
-      width: min(960px, 92%);
-      margin: 32px auto 56px;
-    }
-
-    .hero, .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
-    }
-
-    .hero h1 {
-      margin: 0 0 6px;
-      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-    }
-
-    .subtitle {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .tag {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    h2 {
-      margin: 0 0 12px;
-      font-size: 1.2rem;
-    }
-
-    p, li { color: var(--muted); }
-
-    .grid {
-      margin-top: 18px;
+    .wrap {
+      width: min(1100px, 94%);
+      margin: 24px auto 48px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 12px;
+      grid-template-columns: 320px 1fr;
+      gap: 20px;
+    }
+
+    .panel {
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+    }
+
+    .left {
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+      overflow: hidden;
+    }
+
+    .title-band {
+      background: linear-gradient(120deg, var(--orange), #e9aa49);
+      color: #fff;
+      padding: 18px;
+    }
+
+    .title-band h1 {
+      margin: 0;
+      font-size: 1.55rem;
+      line-height: 1.2;
+      letter-spacing: 0.3px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+
+    .left-body {
+      padding: 18px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--mint);
+      border: 1px solid #89d1bf;
+      color: #0a4d47;
+      font-weight: 700;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
+
+    .links a {
+      display: block;
+      margin: 7px 0;
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .links a:hover { text-decoration: underline; }
+
+    .main {
+      padding: 20px;
+    }
+
+    .main h2 {
+      margin: 0 0 10px;
+      font-size: 1.45rem;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+
+    .deck {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 10px;
+      margin: 14px 0 18px;
     }
 
     .stat {
-      border: 1px solid var(--line);
+      border: 1px dashed #bea178;
       border-radius: 12px;
-      background: #fbfdff;
-      padding: 14px;
+      padding: 10px;
+      background: var(--sand);
+      font-family: "Trebuchet MS", Arial, sans-serif;
     }
 
     .stat strong {
+      font-size: 1.2rem;
       display: block;
-      color: var(--text);
-      font-size: 1.1rem;
     }
 
-    .section { margin-top: 18px; }
+    .note {
+      border-left: 5px solid var(--orange);
+      padding: 10px 12px;
+      background: #fff8ee;
+      margin: 14px 0;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+    }
 
-    .contribution {
-      border: 1px solid var(--line);
+    .timeline {
+      margin-top: 12px;
+      padding-left: 0;
+      list-style: none;
+      border-left: 3px solid #d5b189;
+    }
+
+    .timeline li {
+      margin: 0 0 12px 14px;
+      padding: 12px;
+      border: 1px solid #eadbc9;
       border-radius: 12px;
-      padding: 14px;
-      background: #fcfdff;
-      margin-bottom: 10px;
+      background: #fff;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      position: relative;
     }
 
-    .contribution h3 {
-      margin: 0 0 6px;
-      font-size: 1rem;
+    .timeline li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+      position: absolute;
+      left: -21px;
+      top: 18px;
+    }
+
+    .timeline h3 {
+      margin: 0 0 4px;
+      font-size: 1.03rem;
     }
 
     .meta {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-bottom: 6px;
+      color: #5e6470;
+      font-size: 0.86rem;
+      margin-bottom: 8px;
     }
 
-    a {
-      color: var(--accent);
+    .timeline a {
+      color: var(--teal);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    a:hover { text-decoration: underline; }
+    .timeline a:hover { text-decoration: underline; }
+
+    .split {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .box {
+      border: 1px solid #eadbc9;
+      border-radius: 12px;
+      padding: 12px;
+      background: #fff;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+
+    .box h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
 
     .footer {
-      margin-top: 18px;
-      font-size: 0.95rem;
-      color: #6b7280;
-      text-align: center;
+      margin-top: 14px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: #5e6470;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 640px) {
-      .hero, .card { padding: 18px; }
-      .container { margin-top: 18px; }
+    @media (max-width: 960px) {
+      .wrap { grid-template-columns: 1fr; }
+      .left { position: static; }
+      .deck { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .split { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <section class="hero">
-      <h1>Outreachy Contribution Portfolio</h1>
-      <p class="subtitle"><strong>Aman</strong> | Fedora CommOps Outreachy Applicant</p>
-      <p class="tag">Application Cycle: 2026</p>
-      <p>
-        This page documents my contributions during the Outreachy contribution period.
-        It includes issues, pull requests, discussion comments, and learning outcomes.
-      </p>
-      <p>
-        Profile:
-        <a href="https://github.com/amkr6207" target="_blank" rel="noopener">GitHub</a> |
-        <a href="https://www.linkedin.com/in/aman-1177b2148/" target="_blank" rel="noopener">LinkedIn</a> |
-        <a href="https://codeforces.com/profile/amkr6207" target="_blank" rel="noopener">Codeforces</a>
-      </p>
-    </section>
-
-    <section class="card section">
-      <h2>Contribution Summary</h2>
-      <div class="grid">
-        <div class="stat"><strong>0</strong> Issues Worked On</div>
-        <div class="stat"><strong>0</strong> Pull Requests Opened</div>
-        <div class="stat"><strong>0</strong> PRs Merged</div>
-        <div class="stat"><strong>0</strong> Discussion Comments</div>
+  <div class="wrap">
+    <aside class="panel left">
+      <div class="title-band">
+        <h1>Aman<br/>Outreachy Portfolio</h1>
       </div>
-      <p style="margin-top:10px;">Replace these numbers with your latest totals.</p>
-    </section>
-
-    <section class="card section">
-      <h2>All Contributions</h2>
-
-      <article class="contribution">
-        <h3>Contribution Title 1</h3>
-        <div class="meta">Type: Issue | Date: YYYY-MM-DD</div>
+      <div class="left-body">
+        <div class="chip">Fedora CommOps | 2026</div>
         <p>
-          What I did: Briefly explain your work, how you approached it, and what changed.
+          This page tracks my Outreachy contribution journey in one place with links,
+          outcomes, and key learnings.
         </p>
-        <p>
-          Impact: Mention the value for the project or community.
-        </p>
-        <a href="#" target="_blank" rel="noopener">View Issue/PR/Comment</a>
-      </article>
+        <div class="links">
+          <a href="https://github.com/amkr6207" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/aman-1177b2148/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://codeforces.com/profile/amkr6207" target="_blank" rel="noopener">Codeforces</a>
+        </div>
+      </div>
+    </aside>
 
-      <article class="contribution">
-        <h3>Contribution Title 2</h3>
-        <div class="meta">Type: Pull Request | Date: YYYY-MM-DD</div>
-        <p>
-          What I did: Brief summary of implementation or documentation updates.
-        </p>
-        <p>
-          Impact: State the result or improvement.
-        </p>
-        <a href="#" target="_blank" rel="noopener">View Issue/PR/Comment</a>
-      </article>
-    </section>
+    <main class="panel main">
+      <h2>Contribution Dashboard</h2>
+      <div class="deck">
+        <div class="stat"><strong>0</strong>Issues</div>
+        <div class="stat"><strong>0</strong>PRs Opened</div>
+        <div class="stat"><strong>0</strong>PRs Merged</div>
+        <div class="stat"><strong>0</strong>Comments</div>
+      </div>
 
-    <section class="card section">
-      <h2>Biggest Contribution Highlight</h2>
-      <p><strong>Problem:</strong> Describe the challenge you tackled.</p>
-      <p><strong>Approach:</strong> Explain your method and collaboration process.</p>
-      <p><strong>Result:</strong> Share measurable or practical outcome.</p>
-    </section>
+      <div class="note">
+        Replace the numbers and entries below with your actual Fedora CommOps work links.
+      </div>
 
-    <section class="card section">
-      <h2>Skills and Learnings</h2>
-      <ul>
-        <li>Open source collaboration and async communication</li>
-        <li>Issue triage and contribution workflow in Fedora ecosystem</li>
-        <li>Documentation quality and clarity improvements</li>
-        <li>Git and GitHub-based contribution process</li>
+      <h2>Contribution Timeline</h2>
+      <ul class="timeline">
+        <li>
+          <h3>Contribution Title 1</h3>
+          <div class="meta">Type: Issue | Date: YYYY-MM-DD</div>
+          <p>What I did: Briefly summarize your work and your approach.</p>
+          <p>Impact: Mention what improved for project/community.</p>
+          <a href="#" target="_blank" rel="noopener">Open link</a>
+        </li>
+        <li>
+          <h3>Contribution Title 2</h3>
+          <div class="meta">Type: Pull Request | Date: YYYY-MM-DD</div>
+          <p>What I did: Describe the update and collaboration details.</p>
+          <p>Impact: Highlight final outcome.</p>
+          <a href="#" target="_blank" rel="noopener">Open link</a>
+        </li>
       </ul>
-    </section>
 
-    <section class="card section">
-      <h2>Acknowledgements</h2>
-      <p>
-        Thank you to Fedora CommOps mentors and contributors for guidance, reviews,
-        and support during my Outreachy contribution journey.
-      </p>
-      <p>
-        Contact: <a href="mailto:amkr6207@gmail.com">amkr6207@gmail.com</a>
-      </p>
-    </section>
+      <div class="split">
+        <section class="box">
+          <h3>Biggest Contribution</h3>
+          <p><strong>Problem:</strong> Describe the challenge you solved.</p>
+          <p><strong>Approach:</strong> Explain implementation and feedback process.</p>
+          <p><strong>Result:</strong> Mention result clearly.</p>
+        </section>
 
-    <p class="footer">Last updated: April 2026</p>
-  </main>
+        <section class="box">
+          <h3>Skills and Learnings</h3>
+          <p>Open source communication and collaboration</p>
+          <p>Git workflow and contribution hygiene</p>
+          <p>Documentation and review iteration</p>
+          <p>Community-first problem solving</p>
+        </section>
+      </div>
+
+      <p class="footer">Last updated: April 2026</p>
+    </main>
+  </div>
 </body>
 </html>
