@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outreachy Portfolio | Aman Kumar</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --accent: #0f766e;
+      --accent-soft: #ccfbf1;
+      --line: #dbe4ee;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Noto Sans", sans-serif;
+      background: radial-gradient(circle at 10% 0%, #e6fffa, transparent 35%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(960px, 92%);
+      margin: 32px auto 56px;
+    }
+
+    .hero, .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .hero h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+    }
+
+    p, li { color: var(--muted); }
+
+    .grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfdff;
+      padding: 14px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--text);
+      font-size: 1.1rem;
+    }
+
+    .section { margin-top: 18px; }
+
+    .contribution {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fcfdff;
+      margin-bottom: 10px;
+    }
+
+    .contribution h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .footer {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .hero, .card { padding: 18px; }
+      .container { margin-top: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Outreachy Contribution Portfolio</h1>
+      <p class="subtitle"><strong>Aman Kumar</strong> | Fedora CommOps Outreachy Applicant</p>
+      <p class="tag">Application Cycle: 2026</p>
+      <p>
+        This page documents my contributions during the Outreachy contribution period.
+        It includes issues, pull requests, discussion comments, and learning outcomes.
+      </p>
+    </section>
+
+    <section class="card section">
+      <h2>Contribution Summary</h2>
+      <div class="grid">
+        <div class="stat"><strong>0</strong> Issues Worked On</div>
+        <div class="stat"><strong>0</strong> Pull Requests Opened</div>
+        <div class="stat"><strong>0</strong> PRs Merged</div>
+        <div class="stat"><strong>0</strong> Discussion Comments</div>
+      </div>
+      <p style="margin-top:10px;">Replace these numbers with your latest totals.</p>
+    </section>
+
+    <section class="card section">
+      <h2>All Contributions</h2>
+
+      <article class="contribution">
+        <h3>Contribution Title 1</h3>
+        <div class="meta">Type: Issue | Date: YYYY-MM-DD</div>
+        <p>
+          What I did: Briefly explain your work, how you approached it, and what changed.
+        </p>
+        <p>
+          Impact: Mention the value for the project or community.
+        </p>
+        <a href="#" target="_blank" rel="noopener">View Issue/PR/Comment</a>
+      </article>
+
+      <article class="contribution">
+        <h3>Contribution Title 2</h3>
+        <div class="meta">Type: Pull Request | Date: YYYY-MM-DD</div>
+        <p>
+          What I did: Brief summary of implementation or documentation updates.
+        </p>
+        <p>
+          Impact: State the result or improvement.
+        </p>
+        <a href="#" target="_blank" rel="noopener">View Issue/PR/Comment</a>
+      </article>
+    </section>
+
+    <section class="card section">
+      <h2>Biggest Contribution Highlight</h2>
+      <p><strong>Problem:</strong> Describe the challenge you tackled.</p>
+      <p><strong>Approach:</strong> Explain your method and collaboration process.</p>
+      <p><strong>Result:</strong> Share measurable or practical outcome.</p>
+    </section>
+
+    <section class="card section">
+      <h2>Skills and Learnings</h2>
+      <ul>
+        <li>Open source collaboration and async communication</li>
+        <li>Issue triage and contribution workflow in Fedora ecosystem</li>
+        <li>Documentation quality and clarity improvements</li>
+        <li>Git and GitHub-based contribution process</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>Acknowledgements</h2>
+      <p>
+        Thank you to Fedora CommOps mentors and contributors for guidance, reviews,
+        and support during my Outreachy contribution journey.
+      </p>
+      <p>
+        Contact: <a href="mailto:amkr6207@gmail.com">amkr6207@gmail.com</a>
+      </p>
+    </section>
+
+    <p class="footer">Last updated: April 2026</p>
+  </main>
+</body>
+</html>
