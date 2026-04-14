@@ -88,16 +88,38 @@
     <section id="summary" class="card">
       <h3>Contribution Summary</h3>
       <div class="stats-grid">
-        <article class="stat"><strong>0</strong><span>Issues Worked On</span></article>
-        <article class="stat"><strong>0</strong><span>Pull Requests Opened</span></article>
-        <article class="stat"><strong>0</strong><span>PRs Merged</span></article>
-        <article class="stat"><strong>0</strong><span>Discussion Comments</span></article>
+        <article class="stat"><strong>8</strong><span>Issues Worked On</span></article>
+        <article class="stat"><strong>1</strong><span>Pull Requests Opened</span></article>
+        <article class="stat"><strong>1</strong><span>PRs Merged</span></article>
+        <article class="stat"><strong>13</strong><span>Discussion Comments</span></article>
       </div>
-      <p class="helper">Replace these numbers with your latest totals.</p>
+      <p class="helper">Counts are based on the contributions currently listed on this page.</p>
     </section>
 
     <section id="timeline" class="card">
       <h3>Contribution Timeline</h3>
+      <article class="timeline-item">
+        <h4>Bug Discovery and Fix: `ramalama list` Crash (#2586 → PR #2588, Merged)</h4>
+        <p class="meta">Type: Bug Report + Code Fix | Status: Merged</p>
+        <p>
+          What I did: While working on my assigned RamaLama task (#124), I discovered a
+          reproducible regression in <code>ramalama==0.18.0</code> where <code>ramalama list</code>
+          crashed with <code>AttributeError: 'str' object has no attribute 'timestamp'</code>.
+          I opened issue #2586 with clear reproduction steps and environment details, then
+          submitted PR #2588 to normalize manifest fields for unsupported manifest-attributes
+          engines by parsing <code>modified</code> values and normalizing <code>size</code>.
+        </p>
+        <p>
+          Impact: The fix was merged upstream and included test coverage, preventing this
+          crash path and improving command reliability for users on affected setups.
+        </p>
+        <p>
+          <a href="https://github.com/containers/ramalama/issues/2586" target="_blank" rel="noopener">Bug report (#2586)</a>
+          |
+          <a href="https://github.com/containers/ramalama/pull/2588" target="_blank" rel="noopener">Fix PR (#2588, merged)</a>
+        </p>
+      </article>
+
       <article class="timeline-item">
         <h4>Docling: Explore Document Processing Basics (#122)</h4>
         <p class="meta">Type: Exploratory Learning (Not My Assigned Main Task) | Status: Completed for Learning</p>
@@ -184,9 +206,9 @@
     <section id="highlight" class="card split">
       <article>
         <h3>Biggest Contribution</h3>
-        <p><strong>Task:</strong> RamaLama issue #124 (assigned primary task).</p>
-        <p><strong>Approach:</strong> Set up RamaLama, compared model/transport options, and documented commands + observations for reproducible mentor review.</p>
-        <p><strong>Result:</strong> Built a strong foundation in the exact tooling used for the internship project and demonstrated clear technical reasoning.</p>
+        <p><strong>Task:</strong> Found and fixed upstream crash in <code>ramalama list</code> while working on assigned issue #124.</p>
+        <p><strong>Approach:</strong> Reproduced in a clean Python 3.12 venv, compared behavior across versions (0.17.0 vs 0.18.0), filed issue #2586 with evidence, implemented fix in PR #2588, and incorporated review feedback on tests.</p>
+        <p><strong>Result:</strong> PR #2588 was merged, resolving a real user-facing regression and improving reliability of model listing behavior.</p>
       </article>
 
       <article id="skills">
