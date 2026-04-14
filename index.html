@@ -17,10 +17,13 @@
     </div>
 
     <nav class="sidebar-nav" aria-label="Outreachy sections">
+      <a href="#about">About</a>
+      <a href="#highlights">Highlighted Contributions</a>
       <a href="#phase1">Phase 1 Proof</a>
       <a href="#summary">Contribution Summary</a>
-      <a href="#timeline">Contribution Timeline</a>
-      <a href="#highlight">Biggest Contribution</a>
+      <a href="#projects">Project Contributions</a>
+      <a href="#biggest">Biggest Contribution</a>
+      <a href="#journey">Journey and Experience</a>
       <a href="#skills">Skills and Learnings</a>
     </nav>
 
@@ -53,6 +56,56 @@
         community discussion references, and key outcomes.
       </p>
       <p class="last-updated">Last Updated: April 2026</p>
+    </section>
+
+    <section id="about" class="card">
+      <h3>About This Portfolio</h3>
+      <p>
+        This portfolio documents my contributions to Fedora during the Outreachy contribution phase for
+        the project: <strong>Develop a SLM/LLM using Ramalama RAG based off Fedora RPM Packaging Guidelines</strong>.
+      </p>
+      <p>
+        It is organized to help mentors quickly verify contribution evidence across prerequisites, assigned technical
+        work, code reviews, and upstream bug-fix impact.
+      </p>
+    </section>
+
+    <section id="highlights" class="card">
+      <h3>Highlighted Contributions</h3>
+      <article class="timeline-item">
+        <h4>Upstream Bug Fix Merged: `ramalama list` Crash (#2586 / #2588)</h4>
+        <p class="meta">Bug Report + Fix PR + Tests | Merged</p>
+        <p>
+          Discovered a real regression while working on assigned issue #124, filed a high-quality bug report,
+          and submitted a fix PR that was reviewed and merged upstream.
+        </p>
+        <p>
+          <a href="https://github.com/containers/ramalama/issues/2586" target="_blank" rel="noopener">Bug report</a>
+          |
+          <a href="https://github.com/containers/ramalama/pull/2588" target="_blank" rel="noopener">Merged PR</a>
+        </p>
+      </article>
+      <article class="timeline-item">
+        <h4>Assigned Main Task: RamaLama Basics and Model Workflow (#124)</h4>
+        <p class="meta">Assigned Outreachy Phase 2 Task | In Progress</p>
+        <p>
+          Set up RamaLama, tested model pulls/runs with multiple transports, and documented commands,
+          outputs, and comparative observations for mentor evaluation.
+        </p>
+        <p>
+          <a href="https://forge.fedoraproject.org/commops/interns/issues/124" target="_blank" rel="noopener">Issue link</a>
+          |
+          <a href="https://forge.fedoraproject.org/commops/interns/issues/124#issuecomment-606200" target="_blank" rel="noopener">My contribution comment</a>
+        </p>
+      </article>
+      <article class="timeline-item">
+        <h4>Collaborative Code Review Contributions (PR #2594, PR #2605)</h4>
+        <p class="meta">Review Support | Completed</p>
+        <p>
+          Contributed focused technical review feedback across active Ramalama pull requests to improve
+          implementation quality and collaboration traceability.
+        </p>
+      </article>
     </section>
 
     <section id="phase1" class="card">
@@ -96,8 +149,8 @@
       <p class="helper">Counts are based on the contributions currently listed on this page.</p>
     </section>
 
-    <section id="timeline" class="card">
-      <h3>Contribution Timeline</h3>
+    <section id="projects" class="card">
+      <h3>Project Contributions</h3>
       <article class="timeline-item">
         <h4>Bug Discovery and Fix: `ramalama list` Crash (#2586 → PR #2588, Merged)</h4>
         <p class="meta">Type: Bug Report + Code Fix | Status: Merged</p>
@@ -203,7 +256,7 @@
       </article>
     </section>
 
-    <section id="highlight" class="card split">
+    <section id="biggest" class="card split">
       <article>
         <h3>Biggest Contribution</h3>
         <p><strong>Task:</strong> Found and fixed upstream crash in <code>ramalama list</code> while working on assigned issue #124.</p>
@@ -218,6 +271,18 @@
         <p>Documentation quality and review iteration</p>
         <p>Community-first problem solving</p>
       </article>
+    </section>
+
+    <section id="journey" class="card">
+      <h3>Journey and Experience</h3>
+      <p>
+        This contribution period strengthened my confidence in upstream collaboration: from prerequisite community
+        onboarding, to assigned technical execution, to independent bug discovery and merge-ready fixes.
+      </p>
+      <p>
+        I improved my ability to write reproducible reports, respond to maintainer feedback, and keep my work
+        transparent through clear issue/PR evidence links.
+      </p>
     </section>
   </main>
 </body>
