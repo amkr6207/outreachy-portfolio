@@ -250,6 +250,14 @@ h4 {
   align-items: center;
 }
 
+.meta-key {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
 .type-badge {
   display: inline-block;
   padding: 2px 8px;
