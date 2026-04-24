@@ -171,12 +171,9 @@
         <h4>Bug Discovery and Fix: `ramalama list` Crash (#2586 → PR #2588, Merged)</h4>
         <p class="meta"><span class="meta-key">Type:</span><span class="type-badge">Bug Report + Code Fix</span> <span class="meta-key">Status:</span><span class="status-badge status-merged">Merged</span></p>
         <p>
-          <strong>What I did:</strong> While working on my assigned RamaLama task (#124), I discovered a
-          reproducible regression in <code>ramalama==0.18.0</code> where <code>ramalama list</code>
-          crashed with <code>AttributeError: 'str' object has no attribute 'timestamp'</code>.
-          I opened issue #2586 with clear reproduction steps and environment details, then
-          submitted PR #2588 to normalize manifest fields for unsupported manifest-attributes
-          engines by parsing <code>modified</code> values and normalizing <code>size</code>.
+          <strong>What I did:</strong> While working on my assigned RamaLama task (#124), I found a
+          reproducible crash in <code>ramalama==0.18.0</code> when running <code>ramalama list</code>.
+          I reported it in issue #2586 with clear steps, then opened PR #2588 with a fix and tests.
         </p>
         <p>
           <strong>Impact:</strong> The fix was merged upstream and included test coverage, preventing this
