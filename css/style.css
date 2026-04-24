@@ -205,6 +205,10 @@ h3 {
   border-radius: 12px;
   background: #fcfdff;
   padding: 12px;
+  min-height: 102px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .phase1-item p {
