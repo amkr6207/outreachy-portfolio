@@ -242,8 +242,13 @@ h4 {
 
 .meta {
   margin: 0 0 8px;
-  color: #374151;
+  color: #4b5563;
   font-size: 0.88rem;
+}
+
+.meta-label {
+  font-weight: 700;
+  color: #1f2937;
 }
 
 .status-badge {
